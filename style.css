@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+body {
+  transition: opacity 0.5s ease;
+}
+
+
+header {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+header a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#portfolio {
+  padding: 40px 20px;
+  text-align: center;
+}
+#about{
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+
+.gallery iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+
+.gallery iframe:hover {
+  transform: scale(1.05);
+  aspect-ratio: 16 / 9;
+
+}
+iframe {
+  border: 0px solid red;
+}
+
+
+#about {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  background: #00ffd5;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil Singh | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    /* Splash Screen */
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
+    #splash.hide { opacity: 0; pointer-events: none; }
+    .splash-inner { text-align: center; }
+    .emoji {
+      font-size: 4rem;
+      animation: spinZoom 2s ease infinite;
+    }
+    .loading-text {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes spinZoom {
+      0% { transform: scale(0.3) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: scale(1.2) rotate(360deg); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #content {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    #content.show { opacity: 1; }
+
+    header {
+      background: #000;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 14px 28px;
+      font-size: 1.3rem;
+      border-radius: 8px;
+      text-decoration: none;
+      background: #00ffd5;
+      color: black;
+      font-weight: bold;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .social-buttons a:hover {
+      transform: scale(1.1);
+      background: #00ff88;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      color: #00ffd5;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery iframe {
+      width: 100%;
+      height: 240px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery iframe:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #see-more-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: #00ffd5;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #see-more-btn:hover {
+      background-color: #00ff88;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="emoji">😊</div>
+      <div class="loading-text">Loading... Please wait</div>
+    </div>
+  </div>
+
+  <!-- Main Website Content -->
+  <div id="content">
+    <header>
+      <h1>Nikhil Singh</h1>
+      <p>Digital Artist & Animator</p>
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/nks_919/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@itsnks7418/videos" target="_blank">YouTube</a>
+      </div>
+    </header>
+
+    <section id="portfolio">
+      <h2>My Work</h2>
+      <div class="gallery">
+        <h1>ARTWORK</h1>
+        <!-- Visible Videos -->
+         <iframe src="https://drive.google.com/file/d/1Kqi2FUrrka7wI4Y7A3Hk4TQekslL3VU8/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1L2K-ckOE0T5S_KIafSaP1E61_HdDE_Yk/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1L2cdyOXV0q2YG2R-C3ZCYLOd5mwOOuP-/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1LGb964P3hY8G3XwtJeRi1AvpYo0Ak5R-/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1LIPuCSOF9Uh0HaoA9KYDjP04r_uElt2L/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1LLtP1n6INu-b5b3KaXtTZVT-mRwzBotL/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1LQw6iWm04wCT3eA3Nnrcuil4uRBS-rWj/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1LadHS9pXguwOMNR1sY6FPKiaRzx_oUiL/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1KqTqLTvV8_ZcwtiGWCCJIxZoFrSvP_dx/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+      <div class="gallery more-videos hidden">
+        <h1>ANIMATION</h1>
+        <!-- Hidden videos revealed by button -->
+        <iframe src="https://drive.google.com/file/d/1ErqgW_5rIc8TEu_Z3MK-LpG9C55jSQQJ/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1IjVxJTGvAl5t2yBl5P7556SsIVEk5F8f/preview" allow="autoplay"allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1AgSznuFwwKs-7kiqwW5Cst88H4Ocnv9x/preview" allow="autoplay"allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1zFWJQapWOHaOnqZHgz7-kI1sDk8FARlY/preview" allow="autoplay"allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1zrxnnmnGe39hNTzv81Abcl76FCyLtOGp/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1rDkHEPAtZ0veJeaedzl_V77cy8LmWS0C/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/16UE4siUhrzeredkYLiyTP7uSRomwH-Tk/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1xhswzZijlE8Z8YozMaNe6Z93_uQygA8M/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/12U3xOSovlwJ2M4iu01sSxQXkW1aiEaI8/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1-EMtAIL1p1TMp_8O79sFex1tllzsgRdo/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1EtZO6B8u0s2jbRJ84d0znB0ooVZe948Z/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1Tw2_nEUX9yFFM_xCNhZxyUMcpVJwf-hb/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1s6msESUpNkd6TJ9dJkBWa7j4pA839UVf/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1X3mjdkaqB04tnIMe689kmKp1EYn29bil/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1ndry-hvxOFyWW6pJg7NdbMyt5ZJF0TAk/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+      <button id="see-more-btn" onclick="showMore(event)">See More</button>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("splash").classList.add("hide");
+        document.getElementById("content").classList.add("show");
+      }, 2500);
+    });
+
+    function showMore(event) {
+      document.querySelector(".more-videos").classList.remove("hidden");
+      event.target.style.display = "none";
+    }
+  </script>
+    <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align: center;">I’m Nikhil, a digital artist and animator who enjoys creating playful, clean, and expressive animations. I work with 2D tools and love keeping things minimal with a touch of chaos 😄</p>
+  </section>
+
+</body>
+</html>
