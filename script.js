@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyIframes = document.querySelectorAll('iframe[data-src]');
+    
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                iframe.src = iframe.dataset.src;
+                observer.unobserve(iframe);
+            }
+        });
+    }, {
+        rootMargin: '0px 0px 200px 0px',
+        threshold: 0.1
+    });
+
+    lazyIframes.forEach(iframe => observer.observe(iframe));
+});
+
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".gallery iframe").forEach((el) => {
     const rect = el.getBoundingClientRect();
