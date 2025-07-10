@@ -457,6 +457,10 @@ footer {
   z-index: 1;
   border-radius: 32px;
   box-shadow: 0 0 64px #00ffd5, 0 0 128px #00ffd5, 0 0 32px #ff00e0;
+  pointer-events: none;
+}
+.hero-bg-gif iframe {
+  pointer-events: none !important;
 }
 .hero-bg-blur {
   position: absolute;
